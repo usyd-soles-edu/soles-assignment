@@ -130,6 +130,7 @@
 \usepackage{fontspec}
 \usepackage{titlesec}
 
+% margins
 \geometry{a4paper, 
   total={170mm,257mm}, 
   left=20mm, 
@@ -138,8 +139,7 @@
   right=50mm}
 
 %% colours
-\definecolor{light}{HTML}{FCEDE2}
-\definecolor{highlight}{HTML}{E64626}
+\definecolor{primary}{HTML}{FCEDE2}
 \definecolor{dark}{HTML}{330033}
 
 %% fontsize
@@ -147,17 +147,17 @@
 
 
 
-%% Let's add the border on the right hand side 
+%% Add the border
 \AddToShipoutPicture{% 
     \AtPageLowerLeft{% 
         \put(\LenToUnit{\dimexpr\paperwidth-3cm},0){% 
-            \color{light}\rule{3cm}{\LenToUnit\paperheight}%
+            \color{primary}\rule{3cm}{\LenToUnit\paperheight}%
           }%
      }%
      % logo
     \AtPageLowerLeft{% start the bar at the bottom right of the page
         \put(\LenToUnit{\dimexpr\paperwidth-2.5cm},27.2cm){% move it to the top right
-            \color{light}\includegraphics[width=2cm]{images/usydlogo.png}
+            \color{primary}\includegraphics[width=2cm]{images/usydlogo.png}
           }%
      }%
 }
@@ -266,7 +266,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Lab 01 (Week 01) -- Title goes here},
+  pdftitle={Lab 01 (Week 01) -- Cat ipsum dolor sit amet},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -274,14 +274,14 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Lab 01 (Week 01) -- Title goes here}
+\title{Lab 01 (Week 01) -- Cat ipsum dolor sit amet}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{ABCDXXXX Unit of Study, The University of Sydney}
+\subtitle{ABCDXXXX Unit of Study}
 \author{}
 \date{}
 
@@ -289,13 +289,13 @@
 \maketitle
 \pagestyle{usyd}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[colback={codebgcolor}, breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, colback={codebgcolor}]}{\end{tcolorbox}}\fi
 
 \setstretch{1.2}
 \hypertarget{welcome}{%
 \subsection{Welcome}\label{welcome}}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, opacityback=0, left=2mm, breakable, coltitle=black, toprule=.15mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Learning outcomes}, toptitle=1mm, titlerule=0mm, arc=.35mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Learning outcomes}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
 
 Cat ipsum dolor sit amet, rub face on everything i love cuddles but
 pretend not to be evil:
@@ -394,7 +394,7 @@ Coefficients:
      8.2839       0.1656  
 \end{verbatim}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, opacityback=0, left=2mm, breakable, coltitle=black, toprule=.15mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Answer}, toptitle=1mm, titlerule=0mm, arc=.35mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{ANSWER}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -485,7 +485,7 @@ the main column.}
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, opacityback=0, left=2mm, breakable, coltitle=black, toprule=.15mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 1: Sit on human}, toptitle=1mm, titlerule=0mm, arc=.35mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 1: Sit on human}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
 
 Whatever lick plastic bags am in trouble, roll over, too cute for human
 to get mad or claw at curtains stretch and yawn nibble on tuna ignore
@@ -493,7 +493,7 @@ human bite human hand yet trip owner up in kitchen i want food.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, opacityback=0, left=2mm, breakable, coltitle=black, toprule=.15mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 2: Purrrr}, toptitle=1mm, titlerule=0mm, arc=.35mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 2: Purrrr}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
 
 Walk on keyboard when in doubt, wash sleep on dog bed, force dog to
 sleep on floor so sitting in a box yet i can haz so fall asleep on the
@@ -501,7 +501,7 @@ washing machine get scared by sudden appearance of cucumber.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, opacityback=0, left=2mm, breakable, coltitle=black, toprule=.15mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 3: Show belly}, toptitle=1mm, titlerule=0mm, arc=.35mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 3: Show belly}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -529,7 +529,7 @@ could have eaten that, or cat slap dog in face jump on counter removed
 by human jump on counter again removed by human meow before jumping on
 counter this time to let the human know am coming back yet sleep.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-warning-color-frame, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-warning-color!10!white, opacityback=0, left=2mm, breakable, coltitle=black, toprule=.15mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, toptitle=1mm, titlerule=0mm, arc=.35mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-warning-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
 
 Pushed the mug off the table pretend you want to go out but then don't
 love blinks and purr purr purr purr yawn carefully drink from water
