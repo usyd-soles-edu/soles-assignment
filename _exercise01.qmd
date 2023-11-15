@@ -1,0 +1,9 @@
+:::{.callout-tip appearance="default"}
+## Answer
+
+```{r}
+fit <- lm(speed ~ dist, cars)
+summary(fit)
+```
+
+:::
