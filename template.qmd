@@ -12,7 +12,7 @@ format:
   soles-pdf:
     keep-tex: true
     toc: false
-    mainfont: Verdana
+    mainfont: Arial
     fontsize: 8pt
     linestretch: 1.2
 ---
