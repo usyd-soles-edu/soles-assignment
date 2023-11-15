@@ -1,5 +1,5 @@
 :::{.callout-tip appearance="default"}
-## Answer
+## ANSWER
 
 ```{r}
 fit <- lm(speed ~ dist, cars)
