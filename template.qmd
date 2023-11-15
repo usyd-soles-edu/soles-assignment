@@ -30,11 +30,6 @@ format:
     code-block-border-left: "#E64626"
 ---
 
-```{r setup, include=FALSE}
-show_answers <- FALSE # set to FALSE to hide answers
-```
-
-
 ## Welcome
 
 :::{.callout-tip}
@@ -83,8 +78,13 @@ b. Meow meow, i tell my human, so i cat mojo.
 lm(speed ~ dist, data = cars)
 ```
 
-{{< include _exercise01.qmd >}}
+<!-- A way to toggle solutions - change content-visible to content-hidden to hide the solution.  -->
+::: {.content-visible}
 
+<!-- An example of a way to include solution(s) from an external file. Alternatively, you can include the solution directly. -->
+
+{{< include _exercise01.qmd >}}
+:::
 
 
 ## Exercise 2
@@ -132,12 +132,8 @@ Walk on keyboard when in doubt, wash sleep on dog bed, force dog to sleep on flo
 1. Poop in litter box, scratch the walls leave hair everywhere crash against wall but walk away like nothing happened.
 2. Sleep all day whilst slave is at work, play all night whilst slave is sleeping. 
 3. Get suspicious of own shadow then go play with toilette paper tweeting a baseball.
-
 :::
 
-:::{.callout-tip collapse="true"}
-## Step 4: Scratch
-:::
 
 
 ## Review
