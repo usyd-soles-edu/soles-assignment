@@ -6,15 +6,15 @@ title-block-banner: "#FCEDE2"
 title-block-banner-color: "#000"
 format:
   soles-html:
-    fontsize: 10pt
+    fontsize: 11pt
     toc: true
     fig-cap-location: margin
-  # soles-pdf:
-  #   keep-tex: true
-  #   toc: false
-  #   mainfont: Verdana
-  #   fontsize: 8pt
-  #   linestretch: 1.2
+  soles-pdf:
+    keep-tex: true
+    toc: false
+    mainfont: Verdana
+    fontsize: 8pt
+    linestretch: 1.2
 ---
 
 ## Welcome
