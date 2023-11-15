@@ -46,6 +46,7 @@ Cat ipsum dolor sit amet, rub face on everything i love cuddles but pretend not 
 - Kitten is playing with dead mouse. Thug cat cats are the world cat snacks. 
 - If human is on laptop sit on the keyboard.
 - Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.
+
 :::
 
 ## Prerequisites
@@ -87,7 +88,7 @@ lm(speed ~ dist, data = cars)
 
 <!-- An example of a way to include solution(s) from an external file. Alternatively, you can include the solution directly. -->
 
-{{< include _exercise01.qmd >}}
+{{< include _exercise01_ans.qmd >}}
 :::
 
 
