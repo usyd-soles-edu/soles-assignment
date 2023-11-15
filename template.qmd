@@ -78,7 +78,7 @@ b. Meow meow, i tell my human, so i cat mojo.
 lm(speed ~ dist, data = cars)
 ```
 
-<!-- A way to toggle solutions - change content-visible to content-hidden to hide the solution.  -->
+<!-- A way to toggle solutions - change content-visible to content-hidden to hide the solution. Use "search and replace" functonality to make it easier. -->
 ::: {.content-visible}
 
 <!-- An example of a way to include solution(s) from an external file. Alternatively, you can include the solution directly. -->
