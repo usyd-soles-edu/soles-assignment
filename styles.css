@@ -1,8 +1,14 @@
 .quarto-title-block .quarto-title-banner {
   background-image: url(images/usydlogo.png);
-  background-size: 150px;
+  background-size: 100px;
   background-position: right;
   background-repeat: no-repeat;
   padding-right: 36px;
   background-origin: content-box;
+}
+
+@media (max-width: 800px) {
+  .quarto-title-block .quarto-title-banner {
+    background-image: none;
+  }
 }
