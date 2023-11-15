@@ -1,24 +1,28 @@
 ---
-title: Lab 01 (Week 01) -- Title goes here
-subtitle: ABCDXXXX Unit of Study, The University of Sydney
-description: Week 1
+title: Lab 01 (Week 01) -- Cat ipsum dolor sit amet
+subtitle: ABCDXXXX Unit of Study
+description: ""
 title-block-banner: "#FCEDE2"
 title-block-banner-color: "#000"
 format:
-  # html:
-  #   toc: true
-  #   html-math-method: katex
-  #   code-overflow: wrap
-  #   code-block-border-left: "#e64626"
-  #   code-block-bg: true
-  #   fig-cap-location: margin
-  #   css: styles.css
-  #   code-summary: "Show the code"
+  html:
+    theme:
+      light: zephyr
+    # mainfont: Verdana
+    fontsize: 10pt
+    toc: true
+    html-math-method: katex
+    code-overflow: wrap
+    code-block-border-left: "#e64626"
+    code-block-bg: true
+    fig-cap-location: margin
+    css: styles.css
+    code-summary: "Show the code"
   pdf:
     pdf-engine: lualatex # pdflatex lualatex
     keep-tex: true
     include-in-header: 
-      - "pdfstyle.tex"
+      - "soles-pdf.tex"
     include-before-body:
       - text: |
           \pagestyle{usyd}
