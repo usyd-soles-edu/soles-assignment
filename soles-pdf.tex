@@ -7,6 +7,7 @@
 \usepackage{fontspec}
 \usepackage{titlesec}
 
+% margins
 \geometry{a4paper, 
   total={170mm,257mm}, 
   left=20mm, 
@@ -15,8 +16,7 @@
   right=50mm}
 
 %% colours
-\definecolor{light}{HTML}{FCEDE2}
-\definecolor{highlight}{HTML}{E64626}
+\definecolor{primary}{HTML}{FCEDE2}
 \definecolor{dark}{HTML}{330033}
 
 %% fontsize
@@ -24,17 +24,17 @@
 
 
 
-%% Let's add the border on the right hand side 
+%% Add the border
 \AddToShipoutPicture{% 
     \AtPageLowerLeft{% 
         \put(\LenToUnit{\dimexpr\paperwidth-3cm},0){% 
-            \color{light}\rule{3cm}{\LenToUnit\paperheight}%
+            \color{primary}\rule{3cm}{\LenToUnit\paperheight}%
           }%
      }%
      % logo
     \AtPageLowerLeft{% start the bar at the bottom right of the page
         \put(\LenToUnit{\dimexpr\paperwidth-2.5cm},27.2cm){% move it to the top right
-            \color{light}\includegraphics[width=2cm]{images/usydlogo.png}
+            \color{primary}\includegraphics[width=2cm]{images/usydlogo.png}
           }%
      }%
 }
