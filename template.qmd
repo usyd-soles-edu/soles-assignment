@@ -5,33 +5,16 @@ description: ""
 title-block-banner: "#FCEDE2"
 title-block-banner-color: "#000"
 format:
-  html:
-    theme:
-      light: zephyr
-    # mainfont: Verdana
+  soles-html:
     fontsize: 10pt
     toc: true
-    html-math-method: katex
-    code-overflow: wrap
-    code-block-border-left: "#e64626"
-    code-block-bg: true
     fig-cap-location: margin
-    css: styles.css
-    code-summary: "Show the code"
-  pdf:
-    pdf-engine: lualatex # pdflatex lualatex
-    keep-tex: true
-    include-in-header: 
-      - "soles-pdf.tex"
-    include-before-body:
-      - text: |
-          \pagestyle{usyd}
-    toc: false
-    mainfont: Verdana 
-    fontsize: 8pt
-    linestretch: 1.2
-    code-block-bg: "#F1F1F1"
-    code-block-border-left: "#E64626"
+  # soles-pdf:
+  #   keep-tex: true
+  #   toc: false
+  #   mainfont: Verdana
+  #   fontsize: 8pt
+  #   linestretch: 1.2
 ---
 
 ## Welcome
