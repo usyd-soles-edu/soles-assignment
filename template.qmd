@@ -9,6 +9,7 @@ format:
     fontsize: 11pt
     toc: true
     fig-cap-location: margin
+    css: styles.css
   soles-pdf:
     keep-tex: true
     toc: false

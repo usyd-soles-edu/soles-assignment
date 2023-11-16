@@ -12,7 +12,6 @@ contributes:
       code-overflow: wrap
       code-block-border-left: "#e64626"
       code-block-bg: true
-      css: styles.css
       code-summary: "Show the code"
     pdf:
       pdf-engine: lualatex # pdflatex lualatex
