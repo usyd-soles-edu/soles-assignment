@@ -13,8 +13,10 @@ format:
   soles-pdf:
     keep-tex: true
     toc: false
-    fontsize: 11pt
-    linestretch: 1.05
+    fontsize: 10pt
+    monofont: Source Code Pro
+    monofontoptions: "Scale=0.75"
+    linestretch: 1.2
 ---
 
 ## Welcome
