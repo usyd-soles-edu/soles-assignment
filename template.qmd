@@ -139,4 +139,4 @@ Pushed the mug off the table pretend you want to go out but then don't love blin
 
 ### Attribution
 
-This lab was developed using the SOLES assignment Quarto template, which is available [here](https://github.com/usyd-soles-edu/soles-assignment-quarto). All work licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This lab was developed using resources that are available under a [Creative Commons Attribution 4.0 International license](http://creativecommons.org/licenses/by/4.0/), made available on the [SOLES Open Educational Resources repository](https://github.com/usyd-soles-edu/).
