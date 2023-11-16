@@ -13,9 +13,8 @@ format:
   soles-pdf:
     keep-tex: true
     toc: false
-    mainfont: Arial
-    fontsize: 8pt
-    linestretch: 1.2
+    fontsize: 11pt
+    linestretch: 1.05
 ---
 
 ## Welcome
@@ -30,7 +29,6 @@ Cat ipsum dolor sit amet, rub face on everything i love cuddles but pretend not 
 - Kitten is playing with dead mouse. Thug cat cats are the world cat snacks. 
 - If human is on laptop sit on the keyboard.
 - Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.
-
 :::
 
 ## Prerequisites
@@ -97,7 +95,9 @@ Really likes hummus there's a forty year old lady there let us feast. Kitty love
 #| fig-cap: "A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin if using HTML output. In the PDF output, the caption remains in the main column."
 
 library(ggplot2)
-ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
+ggplot(iris, aes(x = Sepal.Length,
+                 y = Sepal.Width,
+                 colour = Species)) +
   geom_point() +
   theme_minimal()
 
