@@ -1,3 +1,4 @@
+/* add logo to title banner */
 .quarto-title-block .quarto-title-banner {
   background-image: url(images/usydlogo.png);
   background-size: 100px;
@@ -7,8 +8,15 @@
   background-origin: content-box;
 }
 
+/* hide logo when screen size is small */
 @media (max-width: 800px) {
   .quarto-title-block .quarto-title-banner {
     background-image: none;
   }
+}
+
+/* change colour of cell-output */
+.cell-output {
+  background-color: #fcede2;
+  border-radius: 4px;
 }
