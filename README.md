@@ -1,5 +1,8 @@
 # SOLES assignment Quarto Template
 
+![Progress](https://progress-bar.dev/85/?title=progress)
+
+
 This is a Quarto template for creating computational assignments such as statistical practicals and tutorials.
 It uses minimal branding -- using the University of Sydney brand guidelines -- and is designed to be accessible in multiple formats.
 
