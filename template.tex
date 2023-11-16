@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  11pt,
+  10pt,
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
@@ -24,6 +24,7 @@
 \usepackage{lmodern}
 \ifPDFTeX\else  
     % xetex/luatex font selection
+  \setmonofont[Scale=0.75]{Source Code Pro}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -293,13 +294,13 @@
 \maketitle
 \pagestyle{usyd}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, boxrule=0pt, colback={codebgcolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, colback={codebgcolor}, sharp corners, breakable]}{\end{tcolorbox}}\fi
 
-\setstretch{1.05}
+\setstretch{1.2}
 \hypertarget{welcome}{%
 \subsection{Welcome}\label{welcome}}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Learning outcomes}, breakable, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, colback=white, opacityback=0, breakable, rightrule=.15mm, left=2mm, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Learning outcomes}, coltitle=black, opacitybacktitle=0.6, toptitle=1mm, arc=.35mm]
 
 Cat ipsum dolor sit amet, rub face on everything i love cuddles but
 pretend not to be evil:
@@ -398,7 +399,9 @@ Coefficients:
      8.2839       0.1656  
 \end{verbatim}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{ANSWER}, breakable, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, breakable, rightrule=.15mm, left=2mm, bottomrule=.15mm, toprule=.15mm, arc=.35mm]
+
+\textbf{ANSWER}\vspace{2mm}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -491,7 +494,7 @@ the main column.}
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 1: Sit on human}, breakable, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, colback=white, opacityback=0, breakable, rightrule=.15mm, left=2mm, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 1: Sit on human}, coltitle=black, opacitybacktitle=0.6, toptitle=1mm, arc=.35mm]
 
 Whatever lick plastic bags am in trouble, roll over, too cute for human
 to get mad or claw at curtains stretch and yawn nibble on tuna ignore
@@ -499,7 +502,7 @@ human bite human hand yet trip owner up in kitchen i want food.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 2: Purrrr}, breakable, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, colback=white, opacityback=0, breakable, rightrule=.15mm, left=2mm, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 2: Purrrr}, coltitle=black, opacitybacktitle=0.6, toptitle=1mm, arc=.35mm]
 
 Walk on keyboard when in doubt, wash sleep on dog bed, force dog to
 sleep on floor so sitting in a box yet i can haz so fall asleep on the
@@ -507,7 +510,7 @@ washing machine get scared by sudden appearance of cucumber.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 3: Show belly}, breakable, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, colback=white, opacityback=0, breakable, rightrule=.15mm, left=2mm, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 3: Show belly}, coltitle=black, opacitybacktitle=0.6, toptitle=1mm, arc=.35mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -535,7 +538,7 @@ could have eaten that, or cat slap dog in face jump on counter removed
 by human jump on counter again removed by human meow before jumping on
 counter this time to let the human know am coming back yet sleep.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-warning-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, breakable, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-warning-color-frame, bottomtitle=1mm, colback=white, opacityback=0, breakable, rightrule=.15mm, left=2mm, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, coltitle=black, opacitybacktitle=0.6, toptitle=1mm, arc=.35mm]
 
 Pushed the mug off the table pretend you want to go out but then don't
 love blinks and purr purr purr purr yawn carefully drink from water
@@ -550,11 +553,11 @@ slap dog in face snob you for another person.
 \hypertarget{attribution}{%
 \subsubsection{Attribution}\label{attribution}}
 
-This lab was developed using the SOLES assignment Quarto template, which
-is available
-\href{https://github.com/usyd-soles-edu/soles-assignment-quarto}{here}.
-All work licensed under
-\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+This lab was developed using resources that are available under a
+\href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons
+Attribution 4.0 International license}, made available on the
+\href{https://github.com/usyd-soles-edu/}{SOLES Open Educational
+Resources repository}.
 
 
 
