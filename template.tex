@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  8pt,
+  11pt,
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
@@ -24,7 +24,6 @@
 \usepackage{lmodern}
 \ifPDFTeX\else  
     % xetex/luatex font selection
-  \setmainfont[]{Verdana}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -129,6 +128,11 @@
 \usepackage{sectsty}
 \usepackage{fontspec}
 \usepackage{titlesec}
+\usepackage{lmodern}
+
+
+
+
 
 % margins
 \geometry{a4paper, 
@@ -289,13 +293,13 @@
 \maketitle
 \pagestyle{usyd}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, colback={codebgcolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, boxrule=0pt, colback={codebgcolor}]}{\end{tcolorbox}}\fi
 
-\setstretch{1.2}
+\setstretch{1.05}
 \hypertarget{welcome}{%
 \subsection{Welcome}\label{welcome}}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Learning outcomes}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Learning outcomes}, breakable, arc=.35mm, toptitle=1mm]
 
 Cat ipsum dolor sit amet, rub face on everything i love cuddles but
 pretend not to be evil:
@@ -394,7 +398,7 @@ Coefficients:
      8.2839       0.1656  
 \end{verbatim}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{ANSWER}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{ANSWER}, breakable, arc=.35mm, toptitle=1mm]
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -466,7 +470,9 @@ poutine until owner comes back.
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(ggplot2)}
-\FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Sepal.Length, }\AttributeTok{y =}\NormalTok{ Sepal.Width, }\AttributeTok{colour =}\NormalTok{ Species)) }\SpecialCharTok{+}
+\FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Sepal.Length,}
+                 \AttributeTok{y =}\NormalTok{ Sepal.Width,}
+                 \AttributeTok{colour =}\NormalTok{ Species)) }\SpecialCharTok{+}
   \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
   \FunctionTok{theme\_minimal}\NormalTok{()}
 \end{Highlighting}
@@ -485,7 +491,7 @@ the main column.}
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 1: Sit on human}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 1: Sit on human}, breakable, arc=.35mm, toptitle=1mm]
 
 Whatever lick plastic bags am in trouble, roll over, too cute for human
 to get mad or claw at curtains stretch and yawn nibble on tuna ignore
@@ -493,7 +499,7 @@ human bite human hand yet trip owner up in kitchen i want food.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 2: Purrrr}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 2: Purrrr}, breakable, arc=.35mm, toptitle=1mm]
 
 Walk on keyboard when in doubt, wash sleep on dog bed, force dog to
 sleep on floor so sitting in a box yet i can haz so fall asleep on the
@@ -501,7 +507,7 @@ washing machine get scared by sudden appearance of cucumber.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 3: Show belly}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Step 3: Show belly}, breakable, arc=.35mm, toptitle=1mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -529,7 +535,7 @@ could have eaten that, or cat slap dog in face jump on counter removed
 by human jump on counter again removed by human meow before jumping on
 counter this time to let the human know am coming back yet sleep.
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, rightrule=.15mm, opacityback=0, colframe=quarto-callout-warning-color-frame, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, arc=.35mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, toprule=.15mm, coltitle=black, leftrule=.75mm, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, titlerule=0mm, colback=white, colframe=quarto-callout-warning-color-frame, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, breakable, arc=.35mm, toptitle=1mm]
 
 Pushed the mug off the table pretend you want to go out but then don't
 love blinks and purr purr purr purr yawn carefully drink from water
