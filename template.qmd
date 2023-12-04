@@ -10,6 +10,7 @@ format:
     toc: true
     fig-cap-location: margin
     css: styles.css
+    self-contained: false # !!! set to true for final draft
   soles-pdf:
     keep-tex: true
     toc: false
