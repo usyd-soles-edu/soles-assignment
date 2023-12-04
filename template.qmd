@@ -2,7 +2,7 @@
 title: Lab 01 (Week 01) -- Cat ipsum dolor sit amet
 subtitle: ABCDXXXX Unit of Study
 description: ""
-title-block-banner: "#FCEDE2"
+title-block-banner: "#FFFFFF"
 title-block-banner-color: "#000"
 format:
   soles-html:
