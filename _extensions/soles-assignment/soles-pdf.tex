@@ -6,11 +6,12 @@
 \usepackage{sectsty}
 \usepackage{fontspec}
 \usepackage{titlesec}
-\usepackage{lmodern}
+% \usepackage{lmodern}
+% \usepackage{cmbright}
 
 
-
-
+% use sans serif font
+\renewcommand{\familydefault}{\sfdefault}
 
 % margins
 \geometry{a4paper, 
@@ -39,7 +40,7 @@
      % logo
     \AtPageLowerLeft{% start the bar at the bottom right of the page
         \put(\LenToUnit{\dimexpr\paperwidth-2.5cm},27.2cm){% move it to the top right
-            \color{primary}\includegraphics[width=2cm]{images/usydlogo.png}
+            \color{primary}\includegraphics[width=2cm]{_extensions/soles-assignment/assets/images/usydlogo.png}
           }%
      }%
 }
