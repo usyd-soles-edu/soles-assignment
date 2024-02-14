@@ -1,4 +1,4 @@
-:::{.callout-tip appearance="minimal"}
+:::{.callout-tip}
 ## ANSWER
 
 ```{r}
