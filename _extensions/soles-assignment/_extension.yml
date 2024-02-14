@@ -32,3 +32,5 @@ contributes:
       monofont: Source Code Pro
       monofontoptions: "Scale=0.75"
       linestretch: 1.2
+execute:
+  freeze: auto
