@@ -1,6 +1,7 @@
 ---
 title: Lab 01
 subtitle: "UNIT1234"
+description: The University of Sydney
 date: today
 date-format: "[Semester 1,] YYYY"
 title-block-banner: "#FFFFFF"
