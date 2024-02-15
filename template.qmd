@@ -4,13 +4,9 @@ subtitle: "UNIT1234"
 description: The University of Sydney
 date: today
 date-format: "[Semester 1,] YYYY"
+# adjust banner and title block colours
 title-block-banner: "#F4F4F4"
 title-block-banner-color: "#000"
-format:
-  soles-assignment-html:
-    self-contained: false # !!! set true when final
-  soles-assignment-pdf:
-    keep-tex: false
 ---
 
 ## Welcome
