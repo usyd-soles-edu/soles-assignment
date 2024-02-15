@@ -1,6 +1,6 @@
 /* add logo to title banner */
 .quarto-title-block .quarto-title-banner {
-  background-image: url(/images/usydlogo.png);
+  background-image: url(../../..images/usydlogo.png);
   background-size: 100px;
   background-position: right;
   background-repeat: no-repeat;
