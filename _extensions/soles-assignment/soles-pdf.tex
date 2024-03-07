@@ -8,18 +8,13 @@
 \usepackage{titlesec}
 % \usepackage{lmodern}
 % \usepackage{cmbright}
+\usepackage{fvextra}
 
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\DefineVerbatimEnvironment{OutputCode}{Verbatim}{breaklines,commandchars=\\\{\}}
 
 % use sans serif font
 % \renewcommand{\familydefault}{\sfdefault}
-
-% margins
-\geometry{a4paper, 
-  total={170mm,257mm}, 
-  left=20mm, 
-  top=20mm, 
-  bottom=20mm, 
-  right=50mm}
 
 %% colours
 \definecolor{primary}{HTML}{FCEDE2}
@@ -33,14 +28,14 @@
 %% Add the border
 \AddToShipoutPicture{% 
     \AtPageLowerLeft{% 
-        \put(\LenToUnit{\dimexpr\paperwidth-3cm},0){% 
-            \color{primary}\rule{3cm}{\LenToUnit\paperheight}%
+        \put(\LenToUnit{\dimexpr\paperwidth-2cm},0){% 
+            \color{primary}\rule{2cm}{\LenToUnit\paperheight}%
           }%
      }%
      % logo
     \AtPageLowerLeft{% start the bar at the bottom right of the page
-        \put(\LenToUnit{\dimexpr\paperwidth-2.5cm},27.2cm){% move it to the top right
-            \color{primary}\includegraphics[width=2cm]{_extensions/soles-assignment/assets/images/usydlogo.png}
+        \put(\LenToUnit{\dimexpr\paperwidth-1.75cm},\paperheight-2.5cm){% move it to the top right
+            \color{primary}\includegraphics[width=1.5cm]{assets/usydlogo.png}
           }%
      }%
 }
