@@ -65,7 +65,7 @@ Yet sleep on my human's head. Ooooh feather moving feather! weigh eight pounds b
 Scream meowing and smearing hot cat mud all over but ask to go outside and ask to come inside and ask to go outside and ask to come inside, for murr i hate humans they are so annoying need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me.
 
 
-![The University of Sydney logo in black with a specified width.](images/usydlogo.png){#fig-usydlogo width=300}
+![The University of Sydney logo in black with a specified width.](images/usydlogo.png){#fig-usydlogo width=50%}
 
 
 ## Exercise 3
