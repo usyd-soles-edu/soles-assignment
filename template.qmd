@@ -1,12 +1,7 @@
 ---
 title: Lab 01
-subtitle: "UNIT1234"
+subtitle: UNIT1234
 description: The University of Sydney
-date: today
-date-format: "[Semester 1,] YYYY"
-# adjust banner and title block colours
-title-block-banner: "#F4F4F4"
-title-block-banner-color: "#000"
 ---
 
 ## Welcome
@@ -49,18 +44,29 @@ Kitty time, cuddle, no cuddle, cuddle love scratch scratch, but instead of drink
 
 $$ s^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1} $$ {#eq-b}
 
+### Question 1 {style="color:#e64626;"}
+
+Cat slap dog in face lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back. 
+
 a. Stretch making sure that fluff gets into the owner's eyes walk on a keyboard?
-b. Meow meow, i tell my human, so i cat mojo. 
+b. Meow meow, i tell my human, so i cat mojo?
+
+::: {.content-visible when-profile="solution"}
+
+### Solution 1 {style="color:green;"}
+
+Hit you unexpectedly chase ball of string hack up furballs or get poop stuck in paws jumping out of litter box and run around the house. 
 
 ```{r}
 # R code goes here
 lm(speed ~ dist, data = cars)
 ```
 
+:::
 
 ## Exercise 2
 
-Yet sleep on my human's head. Ooooh feather moving feather! weigh eight pounds but take up a full-size bed or attack dog, run away and pretend to be victim. Hit you unexpectedly chase ball of string hack up furballs or get poop stuck in paws jumping out of litter box and run around the house. 
+Yet sleep on my human's head. Ooooh feather moving feather! weigh eight pounds but take up a full-size bed or attack dog, run away and pretend to be victim.
 
 Scream meowing and smearing hot cat mud all over but ask to go outside and ask to come inside and ask to go outside and ask to come inside, for murr i hate humans they are so annoying need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me.
 
@@ -70,7 +76,7 @@ Scream meowing and smearing hot cat mud all over but ask to go outside and ask t
 
 ## Exercise 3
 
-Really likes hummus there's a forty year old lady there let us feast. Kitty loves pigs sleep all day whilst slave is at work, play all night whilst slave is sleeping, scratch at the door then walk away for give attitude rub against owner because nose is wet, and murr i hate humans they are so annoying. Cat slap dog in face lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back. 
+Really likes hummus there's a forty year old lady there let us feast. Kitty loves pigs sleep all day whilst slave is at work, play all night whilst slave is sleeping, scratch at the door then walk away for give attitude rub against owner because nose is wet, and murr i hate humans they are so annoying. 
 
 ```{r}
 #| warning: false
