@@ -3,21 +3,24 @@ project:
   # post-render:
     # - _scripts/post-render.R
 
+description: The University of Sydney
+
 # dates (change these if you need to e.g. for a new semester)
 date: today
 date-format: "[Semester 1,] YYYY"
 
 format:
-  soles-assignment-html:
+  assignment-html:
     embed-resources: false
-    title-block-banner: "LightSteelBlue"
+    title-block-banner: "white"
     title-block-banner-color: "#000"
     reference-location: margin
     citation-location: margin
-  # soles-assignment-pdf:
-  #   toc: true
-  soles-assignment-typst: default
-
+  soles-assignment-typst: default # enable for pdf output (typst format)
 
 execute:
   freeze: auto
+
+profile:
+  default: 
+    - solution
