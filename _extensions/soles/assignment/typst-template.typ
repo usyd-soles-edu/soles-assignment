@@ -77,7 +77,7 @@
 
   // add logo
   align(center)[#block(above: 1em, below: 0em)[
-    #image("_extensions/soles-assignment/assets/images/usydlogo.png", width: 35%)
+    #image("_extensions/soles/assignment/assets/images/usydlogo.png", width: 35%)
   ]]
 
   if date != none {
