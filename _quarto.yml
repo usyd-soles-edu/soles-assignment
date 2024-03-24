@@ -16,7 +16,7 @@ format:
     title-block-banner-color: "#000"
     reference-location: margin
     citation-location: margin
-  soles-assignment-typst: default # enable for pdf output (typst format)
+  assignment-typst: default # enable for pdf output (typst format)
 
 execute:
   freeze: auto
