@@ -59,13 +59,13 @@
       {
         if title != none {
           block(below: 1em)[
-            #text(weight: "bold", size: 2.0em, font: ("Arial", "Helvetica", "sans-serif"))[#title]
+            #text(weight: "bold", size: 2.0em, font: ("Arial", "Helvetica"))[#title]
           ]
         }
         
         if subtitle != none {
           block(below: 0.8em)[
-            #text(size: 1.2em, font: ("Arial", "Helvetica", "sans-serif"))[#subtitle]
+            #text(size: 1.2em, font: ("Arial", "Helvetica"))[#subtitle]
           ]
         }
         
@@ -89,7 +89,7 @@
         
         if date != none {
           block()[
-            #text(font: ("Arial", "Helvetica", "sans-serif"))[#date]
+            #text(font: ("Arial", "Helvetica"))[#date]
           ]
         }
       }
