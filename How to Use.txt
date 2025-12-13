@@ -1,0 +1,8 @@
+1. Copy the template folder somewhere.
+2. Rename it to the Lab or Tut e.g. Lab04-quarto
+3. Move your existing Rmd file (with solutions) into the new project folder.
+4. Don’t forget to move data files and images!
+5. Delete the template.qmd file if you’re not using it (IMPORTANT).
+6. Open the project file (default name is project.Rproj)
+7. RStudio will open, now open your .Rmd file.
+8. 

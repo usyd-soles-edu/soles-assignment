@@ -20,6 +20,9 @@ format:
 
 execute:
   freeze: auto
+  dev: png
+  dev-args: []
+  fig-format: png
 
 profile:
   default: 

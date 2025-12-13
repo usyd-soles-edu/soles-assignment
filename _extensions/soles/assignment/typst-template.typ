@@ -47,44 +47,54 @@
 
 
 
-  if title != none {
-    align(center)[#block(inset: 2em, below: 0em)[
-      #text(weight: "bold", size: 1.5em)[#title]
-    ]]
-  }
-
-  if subtitle != none {
-    align(center)[#block(above: 0em, below: 1.2em)[
-      #text(size: 1.2em)[#subtitle]
-    ]]
-  }
-
-  if authors != none {
-    let count = authors.len()
-    let ncols = calc.min(count, 3)
-    grid(
-      columns: (1fr,) * ncols,
-      row-gutter: 1.5em,
-      ..authors.map(author =>
-          align(center)[
-            #author.name \
-            #author.affiliation \
-            #author.email
+  // Title block with logo on the left
+  block(below: 1.5em)[
+    #grid(
+      columns: (auto, 1fr),
+      column-gutter: 1.5em,
+      align: (left, left),
+      // Logo column
+      image("_extensions/soles/assignment/assets/images/usydlogo.png", width: 2cm),
+      // Title/metadata column
+      {
+        if title != none {
+          block(below: 1em)[
+            #text(weight: "bold", size: 2.0em, font: ("Arial", "Helvetica", "sans-serif"))[#title]
           ]
-      )
+        }
+        
+        if subtitle != none {
+          block(below: 0.8em)[
+            #text(size: 1.2em, font: ("Arial", "Helvetica", "sans-serif"))[#subtitle]
+          ]
+        }
+        
+        if authors != none {
+          let count = authors.len()
+          let ncols = calc.min(count, 3)
+          block(below: 0.5em)[
+            #grid(
+              columns: (1fr,) * ncols,
+              row-gutter: 1em,
+              ..authors.map(author =>
+                [
+                  #author.name \
+                  #author.affiliation \
+                  #author.email
+                ]
+              )
+            )
+          ]
+        }
+        
+        if date != none {
+          block()[
+            #text(font: ("Arial", "Helvetica", "sans-serif"))[#date]
+          ]
+        }
+      }
     )
-  }
-
-  // add logo
-  align(center)[#block(above: 1em, below: 0em)[
-    #image("_extensions/soles/assignment/assets/images/usydlogo.png", width: 35%)
-  ]]
-
-  if date != none {
-    align(center)[#block(inset: 1em)[
-      #date
-    ]]
-  }
+  ]
 
   if abstract != none {
     block(inset: 2em)[

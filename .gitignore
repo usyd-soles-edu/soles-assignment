@@ -3,3 +3,5 @@
 *_files/
 _site/
 _solution/
+
+**/*.quarto_ipynb
