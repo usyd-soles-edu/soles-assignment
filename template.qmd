@@ -1,22 +1,19 @@
 ---
-title: Lab 01
+title: Lab 00
 subtitle: UNIT1234
 description: The University of Sydney
 ---
 
-## Welcome
-
-:::{.callout-tip}
 ## Learning outcomes
 
 Cat ipsum dolor sit amet, rub face on everything i love cuddles but pretend not to be evil:
 
-- Be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day.
-- Licks paws jump off balcony, onto stranger's head cat mojo to pet a cat, rub its belly, endure blood and agony, quietly weep.
-- Kitten is playing with dead mouse. Thug cat cats are the world cat snacks. 
-- If human is on laptop sit on the keyboard.
-- Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.
-:::
+- [ ] Be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day.
+- [ ] Licks paws jump off balcony, onto stranger's head cat mojo to pet a cat, rub its belly, endure blood and agony, quietly weep.
+- [ ] Kitten is playing with dead mouse. Thug cat cats are the world cat snacks. 
+- [ ] If human is on laptop sit on the keyboard.
+- [ ] Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.
+
 
 ## Prerequisites
 
