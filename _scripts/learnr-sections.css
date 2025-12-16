@@ -1,5 +1,5 @@
 /*
-Progressive reveal for Quarto HTML.
+Progressive sections for Quarto HTML.
 
 Default behavior: hide all level-2 sections and show only those
 explicitly marked as visible by JS.
@@ -7,7 +7,7 @@ explicitly marked as visible by JS.
 We also inject a <noscript> fallback via Quarto config so that if
 JavaScript is disabled, all sections render normally.
 */
-main section.level2 {
+main section.level2:not(.lr-visible):not(.lr-disabled) {
   display: none !important;
 }
 
@@ -17,6 +17,15 @@ main section.level2.lr-visible {
 
 /* Handle page-columns sections which use different display */
 main section.level2.page-columns.lr-visible {
+  display: grid !important;
+}
+
+/* When feature is disabled, show all sections */
+main section.level2.lr-disabled {
+  display: block !important;
+}
+
+main section.level2.page-columns.lr-disabled {
   display: grid !important;
 }
 

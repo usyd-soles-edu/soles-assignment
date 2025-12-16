@@ -230,6 +230,38 @@
   function init() {
     console.log('[learnr-sections] Initializing...');
 
+    // Check if progressive sections is enabled
+    // Try multiple ways to get the setting
+    let isEnabled = true; // default
+
+    // Method 1: Check window variable set by inline script
+    if (typeof window.QUARTO_PROGRESSIVE_SECTIONS !== 'undefined') {
+      isEnabled = window.QUARTO_PROGRESSIVE_SECTIONS !== false;
+    }
+
+    // Method 2: Check for data attribute on body
+    if (document.body.dataset.progressiveSections) {
+      isEnabled = document.body.dataset.progressiveSections !== 'false';
+    }
+
+    console.log('[learnr-sections] Progressive sections enabled:', isEnabled);
+
+    if (!isEnabled) {
+      console.log('[learnr-sections] Progressive sections disabled via YAML');
+      // When disabled, show all sections (override the CSS hiding)
+      const mainEl = getMainEl();
+      const sections = getTopLevelSections(mainEl);
+      sections.forEach(function(section) {
+        section.classList.add('lr-disabled');
+        if (section.classList.contains('page-columns')) {
+          section.style.display = 'grid';
+        } else {
+          section.style.display = 'block';
+        }
+      });
+      return;
+    }
+
     const mainEl = getMainEl();
     const sections = getTopLevelSections(mainEl);
     globalSections = sections;

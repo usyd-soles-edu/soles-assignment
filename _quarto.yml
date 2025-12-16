@@ -9,9 +9,15 @@ description: The University of Sydney
 date: today
 date-format: "[Semester 1,] YYYY"
 
+# Progressive sections feature (Next buttons)
+# Set to false to disable the progressive sections functionality
+progressive-sections: true
+
 format:
   assignment-html:
     embed-resources: false
+    filters:
+      - _scripts/progressive-sections.lua
     title-block-banner: "white"
     title-block-banner-color: "#000"
     reference-location: margin
