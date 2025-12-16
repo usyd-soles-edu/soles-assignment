@@ -2,4 +2,4 @@ project:
   output-dir: _site
 
 execute: 
-  output: false
+  output: true

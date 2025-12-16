@@ -16,7 +16,28 @@ format:
     title-block-banner-color: "#000"
     reference-location: margin
     citation-location: margin
+    css:
+      - _scripts/learnr-sections.css
+    resources:
+      - _scripts/learnr-sections.js
+    include-in-header:
+      - text: |
+          <noscript>
+            <style>
+              section.level2 { display: block !important; }
+            </style>
+          </noscript>
+    include-after-body:
+      - text: |
+          <script src="_scripts/learnr-sections.js"></script>
   assignment-typst: default # enable for pdf output (typst format)
+
+format-links: 
+  - assignment-html
+  - format: assignment-typst
+    text: PDF
+    icon: file-pdf
+
 
 execute:
   freeze: auto
@@ -26,4 +47,5 @@ execute:
 
 profile:
   default: 
-    - solution
+    # - solution
+    - exercise
