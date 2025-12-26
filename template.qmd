@@ -1,7 +1,8 @@
 ---
 title: Lab 00
 subtitle: UNIT1234
-description: The University of Sydney
+description: Week X -- Feline concepts
+author: Januar Harianto
 ---
 
 ## Learning outcomes
