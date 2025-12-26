@@ -1,0 +1,22 @@
+/*
+Fix Quarto/Pandoc task list checkbox wrapping.
+
+Pandoc renders task list items as:
+	<ul class="task-list"><li><input type="checkbox"> Text...</li></ul>
+
+Default checkbox negative margins can cause wrapped lines to start
+under the checkbox. This positions the checkbox absolutely and adds
+left padding so all lines align with the first line's text.
+*/
+
+ul.task-list li {
+	position: relative;
+	padding-left: 1.6em;
+}
+
+ul.task-list li input[type="checkbox"] {
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+	margin: 0;
+}
