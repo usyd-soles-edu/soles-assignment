@@ -5,3 +5,5 @@ _site/
 _solution/
 
 **/*.quarto_ipynb
+
+/.luarc.json

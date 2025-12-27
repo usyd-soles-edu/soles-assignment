@@ -1,0 +1,99 @@
+/*
+Progressive sections for Quarto HTML.
+
+Default behavior: hide all level-2 sections and show only those
+explicitly marked as visible by JS.
+
+We also inject a <noscript> fallback via Quarto config so that if
+JavaScript is disabled, all sections render normally.
+*/
+main section.level2:not(.lr-visible):not(.lr-disabled) {
+  display: none !important;
+}
+
+main section.level2.lr-visible {
+  display: block !important;
+}
+
+/* Handle page-columns sections which use different display */
+main section.level2.page-columns.lr-visible {
+  display: grid !important;
+}
+
+/* When feature is disabled, show all sections */
+main section.level2.lr-disabled {
+  display: block !important;
+}
+
+main section.level2.page-columns.lr-disabled {
+  display: grid !important;
+}
+
+.lr-controls {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Make sure the button doesn't stretch oddly in narrow layouts */
+.lr-controls .lr-next {
+  white-space: nowrap;
+}
+
+/* Helper text styling - modern, subtle, and accessible */
+.lr-helper-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* Responsive: hide helper text on smaller screens */
+@media (max-width: 576px) {
+  .lr-helper-text {
+    display: none;
+  }
+}
+
+/* Style TOC links - highlight active section and mute unrevealed ones */
+#TOC a.nav-link {
+  /* Default state - normal */
+}
+
+#TOC a.nav-link.active {
+  /* Currently revealed section - highlight it */
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+}
+
+/* Fix code copy button positioning - ensure consistent positioning context */
+.code-copy-outer-scaffold {
+  position: relative !important;
+}
+
+/* Fix grid layout for page-columns cells */
+.cell.page-columns > .code-copy-outer-scaffold {
+  grid-column: body-content-start / body-content-end;
+  align-self: start;
+  display: block;
+}
+
+/* Ensure sourceCode div doesn't have weird positioning in page-columns */
+.cell.page-columns > .code-copy-outer-scaffold > .sourceCode {
+  position: static;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Force button position in page-columns cells */
+.cell.page-columns .code-copy-button {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  margin-top: 5px !important;
+  margin-right: 5px !important;
+}
+

@@ -1,22 +1,22 @@
 ---
-title: Lab 01
+title: Lab 00
 subtitle: UNIT1234
-description: The University of Sydney
+description: Week X -- Feline concepts
+author: Januar Harianto
 ---
 
-## Welcome
-
-:::{.callout-tip}
 ## Learning outcomes
 
-Cat ipsum dolor sit amet, rub face on everything i love cuddles but pretend not to be evil:
 
-- Be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day.
-- Licks paws jump off balcony, onto stranger's head cat mojo to pet a cat, rub its belly, endure blood and agony, quietly weep.
-- Kitten is playing with dead mouse. Thug cat cats are the world cat snacks. 
-- If human is on laptop sit on the keyboard.
-- Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.
-:::
+### By the end of this lab, you will be able to:
+
+- [ ] Be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day.
+- [ ] Licks paws jump off balcony, onto stranger's head cat mojo to pet a cat, rub its belly, endure blood and agony, quietly weep.
+- [ ] Kitten is playing with dead mouse. Thug cat cats are the world cat snacks. 
+- [ ] If human is on laptop sit on the keyboard.
+- [ ] Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.
+
+
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ Yet sleep on my human's head. Ooooh feather moving feather! weigh eight pounds b
 Scream meowing and smearing hot cat mud all over but ask to go outside and ask to come inside and ask to go outside and ask to come inside, for murr i hate humans they are so annoying need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me.
 
 
-![The University of Sydney logo in black with a specified width.](images/usydlogo.png){#fig-usydlogo width=50%}
+![The University of Sydney logo in black with a specified width.](images/usydlogo.png){#fig-usydlogo width=50% align="left"}
 
 
 ## Exercise 3

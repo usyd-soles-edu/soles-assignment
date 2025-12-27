@@ -17,7 +17,28 @@ contributes:
       toc: true
       toc-location: left
       fig-cap-location: margin
-      css: assets/styles.css
+      # CSS files (order matters)
+      css:
+        - assets/styles.css
+        - assets/progressive-sections.css
+      # Lua filter for metadata processing
+      filters:
+        - progressive-sections.lua
+      # JavaScript resources (copies file to output)
+      resources:
+        - assets/progressive-sections.js
+      # Noscript fallback for accessibility
+      include-in-header:
+        - text: |
+            <noscript>
+              <style>
+                section.level2 { display: block !important; }
+              </style>
+            </noscript>
+      # Load progressive sections script
+      include-after-body:
+        - text: |
+            <script src="_extensions/soles/assignment/assets/progressive-sections.js"></script>
     pdf:
       pdf-engine: xelatex # lualatex pdflatex lualatex
       # pdf-engine-opt: -xelatex  # use with latexmk only
