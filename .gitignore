@@ -1,9 +1,63 @@
-/.quarto/
-.Rproj.user
-*_files/
+### OS
+.DS_Store
+Thumbs.db
+
+### Editors / IDEs
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rprofile
+/.vscode/
+.idea/
+
+### R / RStudio
+# keep .Rproj tracked; ignore user/session files
+.Rproj.user/
+.Renviron
+.Renviron.local
+
+### Quarto / site build / generated
+.quarto/
 _site/
 _solution/
-
+_freeze/
+_cache/
+execute-results/
+*_files/
 **/*.quarto_ipynb
+template_files/
 
+### Figures / generated media
+figure-html/
+figure-pdf/
+template_files/figure-*
+
+### Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+.env
+
+### Node
+node_modules/
+
+### LaTeX / build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+### Misc / project-specific
 /.luarc.json
+/CLAUDE.md
+
+# End of .gitignore
