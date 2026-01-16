@@ -20,6 +20,7 @@ Thumbs.db
 
 ### Quarto / site build / generated
 .quarto/
+/.quarto/
 _site/
 _solution/
 _freeze/
@@ -61,3 +62,4 @@ node_modules/
 /CLAUDE.md
 
 # End of .gitignore
+
