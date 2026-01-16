@@ -13,15 +13,6 @@ date-format: "[Semester 1,] YYYY"
 # Set to false to disable the progressive sections functionality
 progressive-sections: true
 
-format:
-  assignment-html:
-    embed-resources: false
-    title-block-banner: "white"
-    title-block-banner-color: "#000"
-    reference-location: margin
-    citation-location: margin
-  assignment-typst: default # enable for pdf output (typst format)
-
 format-links: 
   - assignment-html
   - format: assignment-typst
