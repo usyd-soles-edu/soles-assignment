@@ -1,11 +1,17 @@
 (function () {
   'use strict';
-  
+
   console.log('[learnr-sections] Script loaded');
 
   // Store sections globally for TOC handler access
   let globalSections = [];
   let currentRevealedIndex = -1;
+
+  // localStorage key for user preference
+  const STORAGE_KEY = 'soles-progressive-enabled';
+
+  // Track if progressive mode is currently active
+  let isProgressiveActive = true;
 
   function getMainEl() {
     return (
@@ -138,6 +144,122 @@
     });
   }
 
+  function disableProgressiveMode(sections) {
+    console.log('[learnr-sections] Disabling progressive mode');
+    isProgressiveActive = false;
+
+    // Show all sections
+    sections.forEach(function (section) {
+      section.classList.add('lr-disabled');
+      section.classList.remove('lr-visible');
+      if (section.classList.contains('page-columns')) {
+        section.style.display = 'grid';
+      } else {
+        section.style.display = 'block';
+      }
+
+      // Hide the Next button controls
+      const controls = section.querySelector('.lr-controls');
+      if (controls) {
+        controls.style.display = 'none';
+      }
+    });
+
+    // Save preference
+    try {
+      localStorage.setItem(STORAGE_KEY, 'false');
+    } catch (e) {
+      console.log('[learnr-sections] Could not save preference:', e);
+    }
+  }
+
+  function enableProgressiveMode(sections) {
+    console.log('[learnr-sections] Enabling progressive mode');
+    isProgressiveActive = true;
+
+    // Remove disabled class from all sections
+    sections.forEach(function (section) {
+      section.classList.remove('lr-disabled');
+    });
+
+    // Reset to first section only
+    revealUpTo(sections, 0);
+
+    // Scroll to first section
+    if (sections.length > 0) {
+      sections[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Save preference
+    try {
+      localStorage.setItem(STORAGE_KEY, 'true');
+    } catch (e) {
+      console.log('[learnr-sections] Could not save preference:', e);
+    }
+  }
+
+  function createToggleControl(sections, initialState) {
+    const toc = document.getElementById('TOC');
+    if (!toc) {
+      console.log('[learnr-sections] No TOC found, skipping toggle creation');
+      return;
+    }
+
+    // Avoid duplicate toggle
+    if (toc.querySelector('.lr-toc-toggle')) {
+      return;
+    }
+
+    // Create toggle container
+    const toggleContainer = document.createElement('div');
+    toggleContainer.className = 'lr-toc-toggle';
+
+    // Create label
+    const label = document.createElement('label');
+    label.className = 'lr-toggle-label';
+
+    // Create checkbox
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = 'lr-progressive-toggle';
+    checkbox.checked = initialState;
+
+    // Create label text
+    const labelText = document.createElement('span');
+    labelText.className = 'lr-toggle-text';
+    labelText.textContent = 'Guided mode';
+
+    // Assemble
+    label.appendChild(checkbox);
+    label.appendChild(labelText);
+    toggleContainer.appendChild(label);
+
+    // Insert at top of TOC
+    toc.insertBefore(toggleContainer, toc.firstChild);
+
+    // Add event listener
+    checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+        enableProgressiveMode(sections);
+      } else {
+        disableProgressiveMode(sections);
+      }
+    });
+
+    console.log('[learnr-sections] Toggle control created');
+  }
+
+  function getUserPreference() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored === 'true') return true;
+      if (stored === 'false') return false;
+      return null; // No preference stored
+    } catch (e) {
+      return null;
+    }
+  }
+
   function findSectionIndexForTarget(sections, targetId) {
     const targetEl = document.getElementById(targetId);
     if (!targetEl) {
@@ -230,28 +352,27 @@
   function init() {
     console.log('[learnr-sections] Initializing...');
 
-    // Check if progressive sections is enabled
-    // Try multiple ways to get the setting
-    let isEnabled = true; // default
+    // Check if progressive sections is enabled via YAML
+    let yamlEnabled = true; // default
 
     // Method 1: Check window variable set by inline script
     if (typeof window.QUARTO_PROGRESSIVE_SECTIONS !== 'undefined') {
-      isEnabled = window.QUARTO_PROGRESSIVE_SECTIONS !== false;
+      yamlEnabled = window.QUARTO_PROGRESSIVE_SECTIONS !== false;
     }
 
     // Method 2: Check for data attribute on body
     if (document.body.dataset.progressiveSections) {
-      isEnabled = document.body.dataset.progressiveSections !== 'false';
+      yamlEnabled = document.body.dataset.progressiveSections !== 'false';
     }
 
-    console.log('[learnr-sections] Progressive sections enabled:', isEnabled);
+    console.log('[learnr-sections] YAML progressive sections:', yamlEnabled);
 
-    if (!isEnabled) {
-      console.log('[learnr-sections] Progressive sections disabled via YAML');
-      // When disabled, show all sections (override the CSS hiding)
+    // If YAML disables progressive sections entirely, don't show the toggle
+    if (!yamlEnabled) {
+      console.log('[learnr-sections] Progressive sections disabled via YAML - no toggle');
       const mainEl = getMainEl();
       const sections = getTopLevelSections(mainEl);
-      sections.forEach(function(section) {
+      sections.forEach(function (section) {
         section.classList.add('lr-disabled');
         if (section.classList.contains('page-columns')) {
           section.style.display = 'grid';
@@ -262,12 +383,18 @@
       return;
     }
 
+    // YAML allows progressive sections - check user preference
+    const userPref = getUserPreference();
+    let shouldEnableProgressive = userPref !== null ? userPref : true;
+
+    console.log('[learnr-sections] User preference:', userPref, '-> Enable progressive:', shouldEnableProgressive);
+
     const mainEl = getMainEl();
     const sections = getTopLevelSections(mainEl);
     globalSections = sections;
 
     console.log('[learnr-sections] Found', sections.length, 'level-2 sections');
-    sections.forEach(function(s, i) {
+    sections.forEach(function (s, i) {
       console.log('[learnr-sections]   Section', i, ':', s.id);
     });
 
@@ -277,33 +404,44 @@
       return;
     }
 
-    // Hide all sections via inline style immediately
-    sections.forEach(function(section) {
-      section.style.display = 'none';
-    });
-
+    // Always add Next buttons (they'll be hidden when disabled)
     addNextButtons(sections);
 
     // Handle TOC link clicks - try immediately, then retry after delays
     // (Quarto may be processing the TOC asynchronously)
     setupTocNavigation(sections);
-    setTimeout(function() { setupTocNavigation(sections); }, 100);
-    setTimeout(function() { setupTocNavigation(sections); }, 500);
-    setTimeout(function() { setupTocNavigation(sections); }, 1000);
+    setTimeout(function () { setupTocNavigation(sections); }, 100);
+    setTimeout(function () { setupTocNavigation(sections); }, 500);
+    setTimeout(function () { setupTocNavigation(sections); }, 1000);
 
-    // Always start with only the first level-2 section visible.
-    revealUpTo(sections, 0);
-    
+    // Create the toggle control in TOC (retry for TOC availability)
+    createToggleControl(sections, shouldEnableProgressive);
+    setTimeout(function () { createToggleControl(sections, shouldEnableProgressive); }, 100);
+    setTimeout(function () { createToggleControl(sections, shouldEnableProgressive); }, 500);
+
+    // Initialize in appropriate state
+    if (shouldEnableProgressive) {
+      isProgressiveActive = true;
+      // Hide all sections first, then reveal first one
+      sections.forEach(function (section) {
+        section.style.display = 'none';
+      });
+      revealUpTo(sections, 0);
+    } else {
+      // User prefers all sections visible
+      disableProgressiveMode(sections);
+    }
+
     // Disable Quarto's native TOC scroll highlighting and use our own
     // This prevents Quarto from highlighting other sections based on scroll
-    document.addEventListener('scroll', function() {
-      // Re-enforce our TOC highlighting based on what we've revealed, not scroll position
-      if (currentRevealedIndex >= 0) {
+    document.addEventListener('scroll', function () {
+      // Only enforce our highlighting when in progressive mode
+      if (isProgressiveActive && currentRevealedIndex >= 0) {
         updateTocLinkStates(sections, currentRevealedIndex);
       }
     }, true);
-    
-    console.log('[learnr-sections] Done - first section should now be visible');
+
+    console.log('[learnr-sections] Done - initialized in', shouldEnableProgressive ? 'progressive' : 'show-all', 'mode');
   }
 
   // Run immediately if DOM already loaded, otherwise wait
