@@ -54,6 +54,16 @@
            size: fontsize)
   set heading(numbering: sectionnumbering)
 
+  // Task list checkbox styling
+  // Replace checkbox chars with boxes, using negative margin to replace the bullet
+  // White fill covers the original bullet marker
+  let checkbox-unchecked = box(stroke: 0.5pt + black, fill: white, width: 0.65em, height: 0.65em, baseline: 15%, inset: 0pt)
+  let checkbox-checked = box(stroke: 0.5pt + black, fill: white, width: 0.65em, height: 0.65em, baseline: 15%, inset: 1pt)[#align(center + horizon, text(size: 0.6em)[✓])]
+
+  // Pull checkbox into bullet position and push text back
+  show "☐": h(-1.2em) + checkbox-unchecked + h(0.3em)
+  show "☑": h(-1.2em) + checkbox-checked + h(0.3em)
+
   // Configure headings.
   show heading.where(level: 2): underline
   show heading.where(level: 2): set block(above: spacing-xl, below: spacing-md)
