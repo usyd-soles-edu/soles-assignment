@@ -3,7 +3,7 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
 ![Progress](https://progress-bar.dev/85/?title=progress)
 
-This is a Quarto template for creating open assignments using the Quarto publishing system. A single `.qmd` source file can produce USYD-branded documents in HTML, PDF and MS Word formats. Supports publishing to Github Pages.
+This is a Quarto template for creating open assignments using the Quarto publishing system. A single `.qmd` source file can produce USYD-branded documents in HTML and PDF (via Typst) formats. Supports publishing to Github Pages.
 
 Note that these are not official templates, but they do follow the University of Sydney's branding guidelines.
 
