@@ -39,3 +39,10 @@ ul.task-list li input[type="checkbox"] {
 	top: 0.2em;
 	margin: 0;
 }
+
+/* Question blocks - minimalist left border accent */
+.question {
+	border-left: 4px solid var(--usyd-red);
+	padding-left: var(--spacing-sm);
+	margin: var(--spacing-lg) 0;
+}

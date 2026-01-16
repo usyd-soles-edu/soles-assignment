@@ -3,6 +3,14 @@ title: Lab 00
 subtitle: UNIT1234
 description: Week X -- Feline concepts
 author: Januar Harianto
+format:
+  assignment-typst: default # enable for pdf output (typst format)
+  assignment-html:
+    embed-resources: false
+    title-block-banner: "white"
+    title-block-banner-color: "#000"
+    reference-location: margin
+    citation-location: margin
 ---
 
 ## Learning outcomes
@@ -33,7 +41,7 @@ If it fits, i sits.
 - [Cat ipsum dolor sit amet](http://www.catipsum.com/). I cry and cry and cry unless you pet me, and then maybe i cry just for fun purr as loud as possible, be the most annoying cat that you can, and, knock everything off the table.
 - [Github documentation](https://docs.github.com/en). Help for anyone interested in using Github.
 
-## Exercise 1
+## Exercise 1 -- Plop down in the middle
 
 Pet a cat, rub its belly, endure blood and agony, quietly weep, keep rubbing belly $\sigma^2$ with love:
 
@@ -44,12 +52,14 @@ Kitty time, cuddle, no cuddle, cuddle love scratch scratch, but instead of drink
 
 $$ s^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1} $$ {#eq-b}
 
-### Question 1 {style="color:#e64626;"}
+::: {.question}
+### Question 1
 
-Cat slap dog in face lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back. 
+Cat slap dog in face lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back.
 
 a. Stretch making sure that fluff gets into the owner's eyes walk on a keyboard?
 b. Meow meow, i tell my human, so i cat mojo?
+:::
 
 ::: {.content-visible when-profile="solution"}
 
