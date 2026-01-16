@@ -1,3 +1,22 @@
+/* USYD Brand Colors */
+:root {
+  --usyd-red: #e64626;
+  --usyd-light: #FCEDE2;
+  --usyd-dark: #330033;
+
+  /* Semantic aliases */
+  --color-primary: var(--usyd-red);
+  --color-accent-light: var(--usyd-light);
+  --color-accent-dark: var(--usyd-dark);
+
+  /* Spacing - following 8pt grid */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.6em;     /* ~26px - task list padding */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+}
+
 /*
 Fix Quarto/Pandoc task list checkbox wrapping.
 
@@ -11,7 +30,7 @@ left padding so all lines align with the first line's text.
 
 ul.task-list li {
 	position: relative;
-	padding-left: 1.6em;
+	padding-left: var(--spacing-md);
 }
 
 ul.task-list li input[type="checkbox"] {

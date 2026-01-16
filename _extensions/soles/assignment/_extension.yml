@@ -7,10 +7,10 @@ contributes:
     html:
       theme:
         light: zephyr
-      linkcolor: "#e64626"
+      linkcolor: "#e64626" 
       html-math-method: katex
       code-overflow: wrap
-      code-block-border-left: "#e64626" # "#e64626"
+      code-block-border-left: "#e64626" 
       code-block-bg: "#FFFFFF"
       code-summary: "Show the code"
       fontsize: 11pt
@@ -39,21 +39,6 @@ contributes:
       include-after-body:
         - text: |
             <script src="_extensions/soles/assignment/assets/progressive-sections.js"></script>
-    pdf:
-      pdf-engine: xelatex # lualatex pdflatex lualatex
-      # pdf-engine-opt: -xelatex  # use with latexmk only
-      include-in-header:
-        - soles-pdf.tex
-      include-before-body:
-        - text: |
-            \pagestyle{usyd}
-      code-block-bg: "#F1F1F1"
-      code-block-border-left: "#e64626"
-      toc: false
-      fontsize: 10pt
-      monofont: Source Code Pro
-      monofontoptions: "Scale=0.75"
-      linestretch: 1.2
     typst:
       template-partials:
         - typst-template.typ

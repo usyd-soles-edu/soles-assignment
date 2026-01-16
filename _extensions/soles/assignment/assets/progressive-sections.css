@@ -30,12 +30,12 @@ main section.level2.page-columns.lr-disabled {
 }
 
 .lr-controls {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-xs);
 }
 
 /* Make sure the button doesn't stretch oddly in narrow layouts */

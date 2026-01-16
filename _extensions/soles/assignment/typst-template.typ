@@ -1,14 +1,29 @@
 
 // This is an example typst template (based on the default template that ships
 // with Quarto). It defines a typst function named 'article' which provides
-// various customization options. This function is called from the 
+// various customization options. This function is called from the
 // 'typst-show.typ' file (which maps Pandoc metadata function arguments)
 //
 // If you are creating or packaging a custom typst template you will likely
-// want to replace this file and 'typst-show.typ' entirely. You can find 
-// documentation on creating typst templates and some examples here: 
+// want to replace this file and 'typst-show.typ' entirely. You can find
+// documentation on creating typst templates and some examples here:
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
+
+// USYD Brand Colors - Canonical definitions
+#let usyd-red = rgb("#e64626")
+#let usyd-light = rgb("#FCEDE2")
+#let usyd-dark = rgb("#330033")
+
+// USYD Brand Fonts (Typst PDF only - HTML uses theme fonts)
+#let usyd-font-sans = ("Arial", "Helvetica")
+
+// USYD Spacing
+#let spacing-xs = 0.5em
+#let spacing-sm = 1em
+#let spacing-md = 1.5em
+#let spacing-lg = 2em
+#let spacing-xl = 2.5em
 
 #let article(
   title: none,
@@ -41,38 +56,38 @@
 
   // Configure headings.
   show heading.where(level: 2): underline
-  show heading.where(level: 2): set block(above: 2.5em, below: 1.5em)
-  show heading.where(level: 3): set block(above: 2em, below: 1em)
-  show heading.where(level: 4): set block(above: 2em, below: 1em)
+  show heading.where(level: 2): set block(above: spacing-xl, below: spacing-md)
+  show heading.where(level: 3): set block(above: spacing-lg, below: spacing-sm)
+  show heading.where(level: 4): set block(above: spacing-lg, below: spacing-sm)
 
 
 
   // Title block with logo on the left
-  block(below: 1.5em)[
+  block(below: spacing-md)[
     #grid(
       columns: (auto, 1fr),
-      column-gutter: 1.5em,
+      column-gutter: spacing-md,
       align: (left, left),
       // Logo column
       image("_extensions/soles/assignment/assets/images/usydlogo.png", width: 2cm),
       // Title/metadata column
       {
         if title != none {
-          block(below: 1em)[
-            #text(weight: "bold", size: 2.0em, font: ("Arial", "Helvetica"))[#title]
+          block(below: spacing-sm)[
+            #text(weight: "bold", size: 2.0em, font: usyd-font-sans)[#title]
           ]
         }
-        
+
         if subtitle != none {
           block(below: 0.8em)[
-            #text(size: 1.2em, font: ("Arial", "Helvetica"))[#subtitle]
+            #text(size: 1.2em, font: usyd-font-sans)[#subtitle]
           ]
         }
         
         if authors != none {
           let count = authors.len()
           let ncols = calc.min(count, 3)
-          block(below: 0.5em)[
+          block(below: spacing-xs)[
             #grid(
               columns: (1fr,) * ncols,
               row-gutter: 1em,
@@ -89,7 +104,7 @@
         
         if date != none {
           block()[
-            #text(font: ("Arial", "Helvetica"))[#date]
+            #text(font: usyd-font-sans)[#date]
           ]
         }
       }
@@ -97,13 +112,13 @@
   ]
 
   if abstract != none {
-    block(inset: 2em)[
+    block(inset: spacing-lg)[
     #text(weight: "semibold")[Abstract] #h(1em) #abstract
     ]
   }
 
   if toc {
-    block(above: 0em, below: 2em)[
+    block(above: 0em, below: spacing-lg)[
     #outline(
       title: auto,
       depth: none
