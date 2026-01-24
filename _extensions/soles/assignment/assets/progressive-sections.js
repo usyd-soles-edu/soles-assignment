@@ -317,6 +317,11 @@
     tocLinks.forEach(function(link) {
       // Use capture phase to intercept before Quarto's handlers
       link.addEventListener('click', function(e) {
+        // If progressive mode is disabled, let normal navigation happen
+        if (!isProgressiveActive) {
+          return;
+        }
+        
         // Use link.hash which gives "#section-id"
         const hash = link.hash;
         if (!hash || hash.length < 2) return;
