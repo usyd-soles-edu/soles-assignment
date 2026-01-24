@@ -385,7 +385,7 @@
 
     // YAML allows progressive sections - check user preference
     const userPref = getUserPreference();
-    let shouldEnableProgressive = userPref !== null ? userPref : true;
+    let shouldEnableProgressive = userPref !== null ? userPref : false;
 
     console.log('[learnr-sections] User preference:', userPref, '-> Enable progressive:', shouldEnableProgressive);
 
