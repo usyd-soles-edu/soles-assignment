@@ -17,16 +17,22 @@ contributes:
       toc: true
       toc-location: left
       fig-cap-location: margin
-      # CSS files (order matters)
+      title-block-banner: "white"
+      title-block-banner-color: "#000"
+      reference-location: margin
+      citation-location: margin
+      format-links:
+        - text: HTML
+          icon: file-code
+        - format: assignment-typst
+          text: PDF
+          icon: file-pdf
+      # CSS files
       css:
         - assets/styles.css
-        - assets/progressive-sections.css
       # Lua filter for metadata processing
       filters:
         - progressive-sections.lua
-      # JavaScript resources (copies file to output)
-      resources:
-        - assets/progressive-sections.js
       # Noscript fallback for accessibility
       include-in-header:
         - text: |
@@ -35,10 +41,6 @@ contributes:
                 section.level2 { display: block !important; }
               </style>
             </noscript>
-      # Load progressive sections script
-      include-after-body:
-        - text: |
-            <script src="_extensions/soles/assignment/assets/progressive-sections.js"></script>
     typst:
       template-partials:
         - typst-template.typ
