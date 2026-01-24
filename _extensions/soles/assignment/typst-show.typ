@@ -60,6 +60,9 @@ $endif$
 $if(toc)$
   toc: $toc$,
 $endif$
+$if(logo)$
+  logo: "$logo$",
+$endif$
   cols: $if(columns)$$columns$$else$1$endif$,
   doc,
 )

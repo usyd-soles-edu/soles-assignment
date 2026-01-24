@@ -40,6 +40,7 @@
   fontsize: 11pt,
   sectionnumbering: none,
   toc: false,
+  logo: none,
   doc,
 ) = {
   set page(
@@ -79,7 +80,7 @@
       column-gutter: spacing-md,
       align: (left, left),
       // Logo column
-      image("_extensions/soles/assignment/assets/images/usydlogo.png", width: 2cm),
+      image(if logo != none { logo } else { "_extensions/soles/assignment/assets/images/usydlogo.png" }, width: 2cm),
       // Title/metadata column
       {
         if title != none {
