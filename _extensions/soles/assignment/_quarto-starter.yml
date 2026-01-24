@@ -1,0 +1,32 @@
+# Minimal Quarto configuration for soles-assignment extension
+# Copy this file to your project root as _quarto.yml
+
+project:
+  type: website
+  output-dir: _site
+
+# Document metadata (customize these)
+title: "Assignment Title"
+subtitle: "UNIT0000"
+author: "Your Name"
+date: today
+date-format: "D MMMM YYYY"
+
+# Default format - extension provides all styling
+format: assignment-html
+
+# Progressive sections enabled by default in extension
+# Set to false to show all sections at once:
+# progressive-sections: false
+
+# Code execution settings
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+
+# Profile system for exercise/solution versions
+profile:
+  default: exercise
+  group:
+    - [exercise, solution]
