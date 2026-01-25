@@ -7,11 +7,13 @@ contributes:
     html:
       theme:
         light: zephyr
-      linkcolor: "#e64626" 
+      # USYD Brand: ochre=#e64626, charcoal=#424242, sandstone=#fcede2
+      # Accents: heritagerose=#daa8a2, jacaranda=#8f9ec9, navy=#1a355e, eucalypt=#71a499
+      linkcolor: "#e64626"
       html-math-method: katex
       code-overflow: wrap
-      code-block-border-left: "#e64626" 
-      code-block-bg: "#FFFFFF"
+      code-block-border-left: false
+      code-block-bg: false
       code-summary: "Show the code"
       fontsize: 11pt
       toc: true

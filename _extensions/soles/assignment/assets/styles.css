@@ -1,20 +1,37 @@
 /* USYD Brand Colors */
 :root {
-  --usyd-red: #e64626;
-  --usyd-light: #FCEDE2;
-  --usyd-dark: #330033;
+  /* Primary palette */
+  --usyd-ochre: #e64626;
+  --usyd-charcoal: #424242;
+  --usyd-sandstone: #fcede2;
+
+  /* Neutrals */
+  --usyd-white: #ffffff;
+  --usyd-black: #000000;
+  --usyd-lightgrey: #f1f1f1;
+
+  /* Accent colors */
+  --usyd-heritagerose: #daa8a2;
+  --usyd-jacaranda: #8f9ec9;
+  --usyd-navy: #1a355e;
+  --usyd-eucalypt: #71a499;
 
   /* Semantic aliases */
-  --color-primary: var(--usyd-red);
-  --color-accent-light: var(--usyd-light);
-  --color-accent-dark: var(--usyd-dark);
+  --color-primary: var(--usyd-ochre);
+  --color-accent-light: var(--usyd-sandstone);
+  --color-accent-dark: var(--usyd-charcoal);
 
   /* Spacing - following 8pt grid */
-  --spacing-xs: 0.5rem;   /* 8px */
-  --spacing-sm: 1rem;      /* 16px */
-  --spacing-md: 1.6em;     /* ~26px - task list padding */
-  --spacing-lg: 2rem;      /* 32px */
-  --spacing-xl: 3rem;      /* 48px */
+  --spacing-xs: 0.5rem;
+  /* 8px */
+  --spacing-sm: 1rem;
+  /* 16px */
+  --spacing-md: 1.6em;
+  /* ~26px - task list padding */
+  --spacing-lg: 2rem;
+  /* 32px */
+  --spacing-xl: 3rem;
+  /* 48px */
 }
 
 /*
@@ -29,20 +46,121 @@ left padding so all lines align with the first line's text.
 */
 
 ul.task-list li {
-	position: relative;
-	padding-left: var(--spacing-md);
+  position: relative;
+  padding-left: var(--spacing-md);
 }
 
 ul.task-list li input[type="checkbox"] {
-	position: absolute;
-	left: 0;
-	top: 0.2em;
-	margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  margin: 0;
 }
 
 /* Question blocks - minimalist left border accent */
 .question {
-	border-left: 4px solid var(--usyd-red);
-	padding-left: var(--spacing-sm);
-	margin: var(--spacing-lg) 0;
+  border-left: 4px solid var(--usyd-ochre);
+  padding-left: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
 }
+
+/* Answer blocks - ochre accent for solutions */
+.ans {
+  background-color: color-mix(in srgb, var(--usyd-ochre) 6%, transparent);
+  padding: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+  font-size: 0.9em;
+}
+
+/* Code blocks - flat minimalist style with header and charcoal border */
+div.sourceCode {
+  position: relative;
+  background-color: var(--usyd-lightgrey) !important;
+  border: 1px solid var(--usyd-charcoal);
+  border-radius: 0;
+  margin-top: 1.5em;
+}
+
+div.sourceCode::before {
+  content: "Code";
+  display: block;
+  background-color: var(--usyd-lightgrey);
+  color: var(--usyd-charcoal);
+  font-size: 0.7em;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+div.sourceCode pre {
+  padding: var(--spacing-sm);
+  padding-top: 0.5em;
+  margin: 0;
+  background-color: var(--usyd-lightgrey) !important;
+  font-size: 0.85em;
+}
+
+div.sourceCode pre code {
+  background-color: transparent !important;
+  color: var(--usyd-black);
+}
+
+/* Standalone pre blocks (non-highlighted code) */
+pre:not(.sourceCode) {
+  background-color: var(--usyd-lightgrey);
+  border: none;
+  border-radius: 0;
+  padding: var(--spacing-sm);
+}
+
+/* Inline code */
+code:not(.sourceCode) {
+  background-color: var(--usyd-lightgrey);
+  border-radius: 0;
+  padding: 0.1em 0.3em;
+}
+
+/* Code output blocks - white style with header (mirrors input blocks) */
+.cell-output-stdout {
+  position: relative;
+  background-color: var(--usyd-white);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.cell-output-stdout::before {
+  content: "Output";
+  display: block;
+  background-color: var(--usyd-white);
+  color: var(--usyd-charcoal);
+  font-size: 0.7em;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cell-output-stdout pre {
+  padding: var(--spacing-sm);
+  padding-top: 0.5em;
+  margin: 0;
+  background-color: var(--usyd-white);
+  border: none;
+  border-radius: 0;
+  font-size: 0.85em;
+}
+
+.cell-output-stdout pre code {
+  background-color: transparent;
+  color: var(--usyd-black);
+}
+
+/* Copy button - no inversion needed with light header */
+/* .code-copy-button {
+  top: -0.4em;
+} */
+
+/* .code-copy-button>.bi::before {
+  filter: invert(1);
+} */

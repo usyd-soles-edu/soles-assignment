@@ -11,9 +11,26 @@
 //   - https://github.com/typst/templates
 
 // USYD Brand Colors - Canonical definitions
-#let usyd-red = rgb("#e64626")
-#let usyd-light = rgb("#FCEDE2")
-#let usyd-dark = rgb("#330033")
+// Primary palette
+#let usyd-ochre = rgb("#e64626")
+#let usyd-charcoal = rgb("#424242")
+#let usyd-sandstone = rgb("#fcede2")
+
+// Neutrals
+#let usyd-white = rgb("#ffffff")
+#let usyd-black = rgb("#000000")
+#let usyd-lightgrey = rgb("#f1f1f1")
+
+// Accent colors
+#let usyd-heritagerose = rgb("#daa8a2")
+#let usyd-jacaranda = rgb("#8f9ec9")
+#let usyd-navy = rgb("#1a355e")
+#let usyd-eucalypt = rgb("#71a499")
+
+// Legacy aliases (deprecated - use new names)
+#let usyd-red = usyd-ochre
+#let usyd-light = usyd-sandstone
+#let usyd-dark = usyd-charcoal
 
 // USYD Brand Fonts (Typst PDF only - HTML uses theme fonts)
 #let usyd-font-sans = ("Arial", "Helvetica")
