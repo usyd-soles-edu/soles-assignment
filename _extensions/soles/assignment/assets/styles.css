@@ -73,32 +73,40 @@ ul.task-list li input[type="checkbox"] {
 }
 
 /* Code blocks - flat minimalist style with header and charcoal border */
-div.sourceCode {
+/* Code and Output blocks - shared styles */
+div.sourceCode,
+.cell-output-stdout {
   position: relative;
-  background-color: var(--usyd-lightgrey) !important;
-  border: 1px solid var(--usyd-charcoal);
+  border: 1px solid color-mix(in srgb, var(--usyd-charcoal) 20%, transparent);
   border-radius: 0;
-  margin-top: 1.5em;
 }
 
-div.sourceCode::before {
-  content: "Code";
+div.sourceCode::before,
+.cell-output-stdout::before {
   display: block;
-  background-color: var(--usyd-lightgrey);
-  color: var(--usyd-charcoal);
   font-size: 0.7em;
   font-weight: 500;
   padding: 0.4em 0.8em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--usyd-charcoal);
+}
+
+/* Code blocks - flat minimalist style with header and charcoal border */
+div.sourceCode {
+  background-color: var(--usyd-lightgrey) !important;
+  margin-top: 1.5em;
+}
+
+div.sourceCode::before {
+  content: "Code";
+  background-color: var(--usyd-lightgrey);
 }
 
 div.sourceCode pre {
-  padding: var(--spacing-sm);
   padding-top: 0.5em;
-  margin: 0;
-  background-color: var(--usyd-lightgrey) !important;
-  font-size: 0.85em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
 }
 
 div.sourceCode pre code {
@@ -122,8 +130,8 @@ code:not(.sourceCode) {
 }
 
 /* Code output blocks - white style with header (mirrors input blocks) */
+/* Code output blocks - white style with header (mirrors input blocks) */
 .cell-output-stdout {
-  position: relative;
   background-color: var(--usyd-white);
   margin-top: 0;
   margin-bottom: 1em;
@@ -131,14 +139,7 @@ code:not(.sourceCode) {
 
 .cell-output-stdout::before {
   content: "Output";
-  display: block;
   background-color: var(--usyd-white);
-  color: var(--usyd-charcoal);
-  font-size: 0.7em;
-  font-weight: 500;
-  padding: 0.4em 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .cell-output-stdout pre {
@@ -155,12 +156,3 @@ code:not(.sourceCode) {
   background-color: transparent;
   color: var(--usyd-black);
 }
-
-/* Copy button - no inversion needed with light header */
-/* .code-copy-button {
-  top: -0.4em;
-} */
-
-/* .code-copy-button>.bi::before {
-  filter: invert(1);
-} */
