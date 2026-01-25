@@ -7,6 +7,7 @@ format:
   # assignment-typst: default # enable for pdf output (typst format)
   assignment-html:
     embed-resources: false
+    code-line-numbers: true
     # title-block-banner, reference-location, citation-location
     # are now defaults in the extension
 ---
@@ -31,6 +32,12 @@ format:
 Cat ipsum dolor sit amet, has closed eyes but still sees you stuff and things but poop on couch. I rule on my back you rub my tummy i bite you hard put butt in owner's face for lick face hiss at owner.
 
 Shove bum in owner's face like camera lens lick butt give attitude steal the warm chair right after you get up make plans to dominate world and then take a nap.
+
+
+- `tidyverse`
+- `ggplot2`
+- `meow`
+
 
 ### Readings
 
