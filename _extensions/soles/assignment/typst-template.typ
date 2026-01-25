@@ -73,20 +73,36 @@
   set heading(numbering: sectionnumbering)
 
   // Task list checkbox styling
-  // Replace checkbox chars with boxes, using negative margin to replace the bullet
-  // White fill covers the original bullet marker
-  let checkbox-unchecked = box(stroke: 0.5pt + black, fill: white, width: 0.65em, height: 0.65em, baseline: 15%, inset: 0pt)
-  let checkbox-checked = box(stroke: 0.5pt + black, fill: white, width: 0.65em, height: 0.65em, baseline: 15%, inset: 1pt)[#align(center + horizon, text(size: 0.6em)[✓])]
+  let checkbox-unchecked = box(
+    stroke: 0.5pt + black,
+    width: 0.65em,
+    height: 0.65em,
+    baseline: 15%,
+  )
+  let checkbox-checked = box(
+    stroke: 0.5pt + black,
+    width: 0.65em,
+    height: 0.65em,
+    baseline: 15%,
+  )[#align(center + horizon, text(size: 0.55em)[✓])]
 
-  // Pull checkbox into bullet position and push text back
-  show "☐": h(-1.2em) + checkbox-unchecked + h(0.3em)
-  show "☑": h(-1.2em) + checkbox-checked + h(0.3em)
+  // Replace checkbox Unicode characters inline
+  show "☐": checkbox-unchecked
+  show "☑": checkbox-checked
 
-  // Configure headings.
-  show heading.where(level: 2): underline
-  show heading.where(level: 2): set block(above: spacing-xl, below: spacing-md)
+  // Configure headings - minimalistic style
+  // Note: Quarto uses shift-heading-level-by: -1, so ## → H1, ### → H2, etc.
+  show heading.where(level: 1): set text(size: 1.5em, weight: "bold")
+  show heading.where(level: 1): set block(above: spacing-xl, below: spacing-md)
+
+  show heading.where(level: 2): set text(size: 1.25em, weight: "bold")
+  show heading.where(level: 2): set block(above: spacing-lg, below: spacing-sm)
+
+  show heading.where(level: 3): set text(size: 1.1em, weight: "bold")
   show heading.where(level: 3): set block(above: spacing-lg, below: spacing-sm)
-  show heading.where(level: 4): set block(above: spacing-lg, below: spacing-sm)
+
+  show heading.where(level: 4): set text(size: 1em, weight: "semibold")
+  show heading.where(level: 4): set block(above: spacing-md, below: spacing-sm)
 
   // Code and output block styling (matches HTML styles.css)
   // Re-render raw content without Quarto's default block styling
@@ -163,53 +179,33 @@
     }
   }
 
-  // Title block with logo on the left
-  block(below: spacing-md)[
-    #grid(
-      columns: (auto, 1fr),
-      column-gutter: spacing-md,
-      align: (left, left),
-      // Logo column
-      image(if logo != none { logo } else { "_extensions/soles/assignment/assets/images/usydlogo.png" }, width: 2cm),
-      // Title/metadata column
-      {
-        if title != none {
-          block(below: spacing-sm)[
-            #text(weight: "bold", size: 2.0em, font: usyd-font-sans)[#title]
-          ]
-        }
+  // Title block - centered, serif font
+  align(center)[
+    #if title != none {
+      block(below: spacing-sm)[
+        #text(weight: "bold", size: 2.0em)[#title]
+      ]
+    }
 
-        if subtitle != none {
-          block(below: 0.8em)[
-            #text(size: 1.2em, font: usyd-font-sans)[#subtitle]
-          ]
-        }
-        
-        if authors != none {
-          let count = authors.len()
-          let ncols = calc.min(count, 3)
-          block(below: spacing-xs)[
-            #grid(
-              columns: (1fr,) * ncols,
-              row-gutter: 1em,
-              ..authors.map(author =>
-                [
-                  #author.name \
-                  #author.affiliation \
-                  #author.email
-                ]
-              )
-            )
-          ]
-        }
-        
-        if date != none {
-          block()[
-            #text(font: usyd-font-sans)[#date]
-          ]
-        }
+    #if subtitle != none {
+      block(below: 0.8em)[
+        #text(size: 1.2em)[#subtitle]
+      ]
+    }
+
+    #if authors != none {
+      for author in authors {
+        block(below: spacing-xs)[
+          #author.name
+        ]
       }
-    )
+    }
+
+    #if date != none {
+      block(below: spacing-md)[
+        #date
+      ]
+    }
   ]
 
   if abstract != none {
