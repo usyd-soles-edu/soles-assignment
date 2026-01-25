@@ -1,3 +1,39 @@
+/* USYD Brand Colors */
+:root {
+  /* Primary palette */
+  --usyd-ochre: #e64626;
+  --usyd-charcoal: #424242;
+  --usyd-sandstone: #fcede2;
+
+  /* Neutrals */
+  --usyd-white: #ffffff;
+  --usyd-black: #000000;
+  --usyd-lightgrey: #f1f1f1;
+
+  /* Accent colors */
+  --usyd-heritagerose: #daa8a2;
+  --usyd-jacaranda: #8f9ec9;
+  --usyd-navy: #1a355e;
+  --usyd-eucalypt: #71a499;
+
+  /* Semantic aliases */
+  --color-primary: var(--usyd-ochre);
+  --color-accent-light: var(--usyd-sandstone);
+  --color-accent-dark: var(--usyd-charcoal);
+
+  /* Spacing - following 8pt grid */
+  --spacing-xs: 0.5rem;
+  /* 8px */
+  --spacing-sm: 1rem;
+  /* 16px */
+  --spacing-md: 1.6em;
+  /* ~26px - task list padding */
+  --spacing-lg: 2rem;
+  /* 32px */
+  --spacing-xl: 3rem;
+  /* 48px */
+}
+
 /*
 Fix Quarto/Pandoc task list checkbox wrapping.
 
@@ -10,13 +46,113 @@ left padding so all lines align with the first line's text.
 */
 
 ul.task-list li {
-	position: relative;
-	padding-left: 1.6em;
+  position: relative;
+  padding-left: var(--spacing-md);
 }
 
 ul.task-list li input[type="checkbox"] {
-	position: absolute;
-	left: 0;
-	top: 0.2em;
-	margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  margin: 0;
+}
+
+/* Question blocks - minimalist left border accent */
+.question {
+  border-left: 4px solid var(--usyd-ochre);
+  padding-left: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+}
+
+/* Answer blocks - ochre accent for solutions */
+.ans {
+  background-color: color-mix(in srgb, var(--usyd-ochre) 6%, transparent);
+  padding: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+  font-size: 0.9em;
+}
+
+/* Code blocks - flat minimalist style with header and charcoal border */
+/* Code and Output blocks - shared styles */
+div.sourceCode,
+.cell-output-stdout {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--usyd-charcoal) 20%, transparent);
+  border-radius: 0;
+}
+
+div.sourceCode::before,
+.cell-output-stdout::before {
+  display: block;
+  font-size: 0.7em;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--usyd-charcoal);
+}
+
+/* Code blocks - flat minimalist style with header and charcoal border */
+div.sourceCode {
+  background-color: var(--usyd-lightgrey) !important;
+  margin-top: 1.5em;
+}
+
+div.sourceCode::before {
+  content: "Code";
+  background-color: var(--usyd-lightgrey);
+}
+
+div.sourceCode pre {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
+}
+
+div.sourceCode pre code {
+  background-color: transparent !important;
+  color: var(--usyd-black);
+}
+
+/* Standalone pre blocks (non-highlighted code) */
+pre:not(.sourceCode) {
+  background-color: var(--usyd-lightgrey);
+  border: none;
+  border-radius: 0;
+  padding: var(--spacing-sm);
+}
+
+/* Inline code */
+code:not(.sourceCode) {
+  background-color: var(--usyd-lightgrey);
+  border-radius: 0;
+  padding: 0.1em 0.3em;
+}
+
+/* Code output blocks - white style with header (mirrors input blocks) */
+/* Code output blocks - white style with header (mirrors input blocks) */
+.cell-output-stdout {
+  background-color: var(--usyd-white);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.cell-output-stdout::before {
+  content: "Output";
+  background-color: var(--usyd-white);
+}
+
+.cell-output-stdout pre {
+  padding: var(--spacing-sm);
+  padding-top: 0.5em;
+  margin: 0;
+  background-color: var(--usyd-white);
+  border: none;
+  border-radius: 0;
+  font-size: 0.85em;
+}
+
+.cell-output-stdout pre code {
+  background-color: transparent;
+  color: var(--usyd-black);
 }

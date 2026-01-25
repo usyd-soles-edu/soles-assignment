@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c2964b9f9ce636011a2d738487ba7330.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b53e093e85d2365de994de9cc4282191.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/progressive-sections-1.0.0/progressive-sections.js"></script>
+<link href="site_libs/quarto-contrib/progressive-sections-1.0.0/progressive-sections.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -171,7 +173,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/soles/assignment/assets/styles.css">
-<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/soles/assignment/assets/progressive-sections.css">
 </head>
 
 <body class="floating slimcontent quarto-light">
@@ -204,7 +205,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">Semester 1, 2025</p>
+        <p class="date">Semester 1, 2026</p>
       </div>
     </div>
     
@@ -228,9 +229,10 @@ window.Quarto = {
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
   </ul></li>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a>
+  <li><a href="#exercise-1-plop-down-in-the-middle" id="toc-exercise-1-plop-down-in-the-middle" class="nav-link" data-scroll-target="#exercise-1-plop-down-in-the-middle">Exercise 1 – Plop down in the middle</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#solution-1" id="toc-solution-1" class="nav-link" data-scroll-target="#solution-1">Solution 1</a></li>
   </ul></li>
   <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
   <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
@@ -270,8 +272,13 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <section id="software" class="level3">
 <h3 class="anchored" data-anchor-id="software">Software</h3>
-<p>Cat ipsum dolor sit amet, has closed eyes but still sees you stuff and things but poop on couch. I rule on my back you rub my tummy i bite you hard put butt in owner’s face for lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back meow meow.</p>
+<p>Cat ipsum dolor sit amet, has closed eyes but still sees you stuff and things but poop on couch. I rule on my back you rub my tummy i bite you hard put butt in owner’s face for lick face hiss at owner.</p>
 <p>Shove bum in owner’s face like camera lens lick butt give attitude steal the warm chair right after you get up make plans to dominate world and then take a nap.</p>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>ggplot2</code></li>
+<li><code>meow</code></li>
+</ul>
 </section>
 <section id="readings" class="level3">
 <h3 class="anchored" data-anchor-id="readings">Readings</h3>
@@ -282,19 +289,39 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<section id="exercise-1-plop-down-in-the-middle" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-plop-down-in-the-middle">Exercise 1 – Plop down in the middle</h2>
 <p>Pet a cat, rub its belly, endure blood and agony, quietly weep, keep rubbing belly <span class="math inline">\sigma^2</span> with love:</p>
 <p><span id="eq-a"><span class="math display"> \sigma^2 = \frac{\sum_{i=1}^n (x_i - \mu)^2}{n}  \tag{1}</span></span></p>
 <p>Kitty time, cuddle, no cuddle, cuddle love scratch scratch, but instead of drinking water from the cat bowl, make sure to steal water from the toilet <span class="math inline">s^2</span>:</p>
 <p><span id="eq-b"><span class="math display"> s^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1}  \tag{2}</span></span></p>
-<section id="question-1" class="level3" style="color:#e64626;">
-<h3 style="color:#e64626;" class="anchored" data-anchor-id="question-1">Question 1</h3>
+<section id="question-1" class="level3 question">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <p>Cat slap dog in face lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back.</p>
 <ol type="a">
 <li>Stretch making sure that fluff gets into the owner’s eyes walk on a keyboard?</li>
 <li>Meow meow, i tell my human, so i cat mojo?</li>
 </ol>
+</section>
+<section id="solution-1" class="level3 ans">
+<h3 class="anchored" data-anchor-id="solution-1">Solution 1</h3>
+<ol type="a">
+<li>Hit you unexpectedly chase ball of string hack up furballs or get poop stuck in paws jumping out of litter box and run around the house.</li>
+<li>Pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back meow meow.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># R code goes here</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">lm</span>(speed <span class="sc">~</span> dist, <span class="at">data =</span> cars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = speed ~ dist, data = cars)
+
+Coefficients:
+(Intercept)         dist  
+     8.2839       0.1656  </code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="exercise-2" class="level2 page-columns page-full">
@@ -316,15 +343,12 @@ Figure&nbsp;1: The University of Sydney logo in black with a specified width.
 <h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
 <p>Really likes hummus there’s a forty year old lady there let us feast. Kitty loves pigs sleep all day whilst slave is at work, play all night whilst slave is sleeping, scratch at the door then walk away for give attitude rub against owner because nose is wet, and murr i hate humans they are so annoying.</p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> Sepal.Width,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">colour =</span> Species)) <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>                 <span class="at">y =</span> Sepal.Width,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                 <span class="at">colour =</span> Species)) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display page-columns page-full">
 <div id="fig-main-margin-cap" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
@@ -817,7 +841,6 @@ Warning
   });
   </script>
 </div> <!-- /content -->
-<script src="site_libs/quarto-contrib/quarto-project/soles/assignment/assets/progressive-sections.js"></script>
 
 
 
