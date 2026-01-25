@@ -1,9 +1,10 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "!.md"
   # post-render:
     # - _scripts/post-render.R
-
-description: The University of Sydney
 
 # dates (change these if you need to e.g. for a new semester)
 date: today
@@ -28,5 +29,5 @@ execute:
 
 profile:
   default: 
-    # - solution
-    - exercise
+    - solution
+    # - exercise
