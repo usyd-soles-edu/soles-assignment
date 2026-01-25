@@ -28,7 +28,7 @@ format:
 
 ### Software
 
-Cat ipsum dolor sit amet, has closed eyes but still sees you stuff and things but poop on couch. I rule on my back you rub my tummy i bite you hard put butt in owner's face for lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back meow meow. 
+Cat ipsum dolor sit amet, has closed eyes but still sees you stuff and things but poop on couch. I rule on my back you rub my tummy i bite you hard put butt in owner's face for lick face hiss at owner.
 
 Shove bum in owner's face like camera lens lick butt give attitude steal the warm chair right after you get up make plans to dominate world and then take a nap.
 
@@ -60,16 +60,18 @@ b. Meow meow, i tell my human, so i cat mojo?
 :::
 
 ::: {.content-visible when-profile="solution"}
+::: {.ans}
 
-### Solution 1 {style="color:green;"}
+### Solution 1
 
-Hit you unexpectedly chase ball of string hack up furballs or get poop stuck in paws jumping out of litter box and run around the house. 
+a. Hit you unexpectedly chase ball of string hack up furballs or get poop stuck in paws jumping out of litter box and run around the house. 
+b. Pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back meow meow. 
 
 ```{r}
 # R code goes here
 lm(speed ~ dist, data = cars)
 ```
-
+:::
 :::
 
 ## Exercise 2
@@ -88,7 +90,7 @@ Really likes hummus there's a forty year old lady there let us feast. Kitty love
 
 ```{r}
 #| warning: false
-#| code-fold: true
+#| code-fold: false
 #| label: fig-main-margin-cap
 #| fig-cap: "A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin if using HTML output. In the PDF output, the caption remains in the main column."
 
