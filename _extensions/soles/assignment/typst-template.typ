@@ -88,7 +88,80 @@
   show heading.where(level: 3): set block(above: spacing-lg, below: spacing-sm)
   show heading.where(level: 4): set block(above: spacing-lg, below: spacing-sm)
 
+  // Code and output block styling (matches HTML styles.css)
+  // Re-render raw content without Quarto's default block styling
+  show raw.where(block: true): it => {
+    // Extract text and re-render as inline raw to avoid default block styling
+    let code-content = raw(it.text, lang: it.lang, block: false)
 
+    if it.lang != none {
+      // Code input block - has a language specified
+      block(
+        width: 100%,
+        inset: 0pt,
+        stroke: 0.5pt + usyd-charcoal.lighten(80%),
+        above: 1.5em,
+        below: 0.5em,
+      )[
+        // Header
+        #block(
+          width: 100%,
+          fill: usyd-lightgrey,
+          inset: (x: 0.8em, y: 0.4em),
+          below: 0pt,
+        )[
+          #text(
+            size: 0.7em,
+            weight: 500,
+            tracking: 0.05em,
+            fill: usyd-charcoal,
+          )[CODE]
+        ]
+        // Code content
+        #block(
+          width: 100%,
+          fill: usyd-lightgrey,
+          inset: (x: 0.8em, top: 0.5em, bottom: 1em),
+          above: 0pt,
+        )[
+          #text(size: 1em)[#code-content]
+        ]
+      ]
+    } else {
+      // Output block - no language specified
+      block(
+        width: 100%,
+        inset: 0pt,
+        stroke: 0.5pt + usyd-charcoal.lighten(80%),
+        above: 0pt,
+        below: 1em,
+      )[
+        // Header
+        #block(
+          width: 100%,
+          fill: usyd-white,
+          inset: (x: 0.8em, y: 0.4em),
+          below: 0pt,
+        )[
+          #text(
+            size: 0.7em,
+            weight: 500,
+            tracking: 0.05em,
+            fill: usyd-charcoal,
+          )[OUTPUT]
+        ]
+        // Output content
+        #block(
+          width: 100%,
+          fill: usyd-white,
+          inset: (x: 0.8em, top: 0.5em, bottom: 1em),
+          above: 0pt,
+        )[
+          #text(size: 0.95em)[#code-content]
+        ]
+      ]
+    }
+  }
 
   // Title block with logo on the left
   block(below: spacing-md)[

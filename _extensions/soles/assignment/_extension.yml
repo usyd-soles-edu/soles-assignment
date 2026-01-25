@@ -24,7 +24,8 @@ contributes:
       reference-location: margin
       citation-location: margin
       format-links:
-        - text: HTML
+        - format: assignment-html
+          text: HTML
           icon: file-code
         - format: assignment-typst
           text: PDF

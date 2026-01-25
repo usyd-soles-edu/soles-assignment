@@ -4,7 +4,7 @@ subtitle: UNIT1234
 description: Week X -- Feline concepts
 author: Januar Harianto
 format:
-  # assignment-typst: default # enable for pdf output (typst format)
+  assignment-typst: default # enable for pdf output (typst format)
   assignment-html:
     embed-resources: false
     code-line-numbers: true
